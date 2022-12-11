@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Katona Gergely">
+	<meta name="description" content="Én (Katona Gergely)">
+	<title>Én</title>
+	<link rel="icon" href="img/favicon.jpg" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="dist/jquery-3.5.0.min.js"></script>
+	<script src="dist/jquery.validate.min.js"></script>
+	<script src="dist/validation.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-5 fokep">
+			<figure>
+				<img src="img/linkedin.jpg" alt="Katona Gergely">
+				<figcaption>A linkedin profilképem</figcaption>
+			</figure>
+		</div>
+
+		<div class="col-7 foszoveg">
+			<article>
+				Felelősségteljes, megbízható embernek tartom magamat, kiemelkedő kommunikációs képességekkel.
+				Munkavégzésre képes vagyok csapatban, egyedül, illetve távolról is. Gyorsan tanulok, a munkában lelkes és
+				terhelhető vagyok. Egyetemi tanulmányaim
+				(csoportos projektek), valamint a szakmai gyakorlatom ideje alatt számos alkalommal volt lehetőségem
+				mindezt bizonyítani. Ezt egyenesen másoltam ki a tavalyi CV-mből.
+			</article>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-5 fokep">
+			<figure>
+				<img src="img/id_front.jpg" alt="személyi">
+				<figcaption>A személyim, minimális ccenzúrával</figcaption>
+			</figure>
+		</div>
+
+		<div class="col-7 foszoveg">
+			<article>
+				Kb. két éve járt le a személyi igazolványom, sikeresen nem vesztettem el 8 éven keresztül, majd pedig
+				időben eljutottam az okmányirodába csinálni egy újat.
+				Fontos volt, hogy legyen érvényes személyim, mert anélkül nem lehettem volna tanú a bátyám esküvőjén.
+				Azóta kicsit jobb a hajam. Jaj igen és van rajta cenzúra mert azért mégis nem illik csak úgy kirakni
+				ezeket az adatokat asszem?
+			</article>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-5 fokep">
+			<figure>
+				<img src="img/opossum.png" alt="opossum">
+				<figcaption>Oposszum mém</figcaption>
+			</figure>
+		</div>
+
+		<div class="col-7 foszoveg">
+			<article>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id augue vitae eros fringilla
+				fringilla. Maecenas mattis ultricies iaculis. Donec hendrerit lectus vel volutpat iaculis. Cras
+				consectetur a ligula et interdum. Curabitur molestie aliquam interdum. Integer dictum egestas dictum.
+				Curabitur pulvinar, metus quis sollicitudin sagittis, ex ligula faucibus ex, sit amet faucibus nisi
+				neque ut eros. Aenean ornare, odio at fermentum vehicula, odio enim vestibulum ligula, dapibus tempor
+				elit tortor eu lorem.
+			</article>
+		</div>
+	</div>
+	<form id="sponsor" action="#" method="post">
+		<section class="urlap">
+			<table class="kap">
+				<caption>
+					<h2>Szponzorálás</h2>
+				</caption>
+				<tr>
+					<td class="kap">
+						<label>
+							Vezetéknév: <input type="text" id="vnev" name="vnev">
+						</label>
+					</td>
+					<td class="kap">
+						<label>
+							Keresztnév: <input type="text" id="knev" name="knev">
+						</label>
+					</td>
+					<td class="kap">
+						<label>Email cim<input type="email" id="emil" name="emil"></label>
+					</td>
+				</tr>
+				<tr>
+					<td class="kap">
+						Hány hónapig támogatna engem?<input type="range" name="month" id="month" min="3" value="3"
+							max="18" step="1" onchange="updatet(this.value)"><br>
+						<input type="text" id="szam" value="" size="1" name="szam" onchange="updater(this.value)">
+					</td>
+					<td class="kap">
+						<label for="amount">Hány euróval támogatna engem egy hónapban? </label> <input type="number"
+							min="1000" max="1000000" step="1000" name="amount" id="amount">
+					</td>
+					<td class="kap">
+						Milyen pénznemben szeretné megkapni az eredményt? <br>
+						<input type="radio" id="eur" name="penz" value="eur">
+						<label for="eur">Euró</label><br>
+						<input type="radio" id="huf" name="penz" value="huf">
+						<label for="huf">Magyar Forint</label><br>
+					</td>
+				</tr>
+				<tr>
+					<td class="kap">
+						<input type="button" value="Számolj!" class="gomb" onclick="szamolj(szam.value,amount.value)">
+					</td>
+					<td class="kap">
+						Teljes összeg:<input type="text" value="" disabled id="eredmeny" name="eredmeny">
+					</td>
+					<td class="kap">
+						<input type="submit" value="Küldés" class="gomb">
+					</td>
+				</tr>
+			</table>
+		</section>
+	</form>
+</body>
+
+</html>
