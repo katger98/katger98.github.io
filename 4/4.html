@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katona Gergely">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="4/4.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form action="#" class="urlap">
+                    Név: <input type="text" id="names" name="names" size="3">
+                    Ár: <input type="text" id="price" name="price" size="2">
+                    <input type="button" value="Hozzáad!" onclick="addObject(names.value, price.value)">
+                    Lista hossza: <input type="text" id="length" name="length" size="1">
+                    <input type="button" value="Adatok számítása!" onclick="calculate()">
+                    <p id="results"></p>
+                </form>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
